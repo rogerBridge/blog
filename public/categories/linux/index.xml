@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on </title>
+    <link>http://node.fenr.men/categories/linux/</link>
+    <description>Recent content in Linux on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 16 Jun 2020 03:06:29 +0800</lastBuildDate>
+    
+	<atom:link href="http://node.fenr.men/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>设置持久的DNS解析服务器</title>
+      <link>http://node.fenr.men/post/%E8%AE%BE%E7%BD%AE%E6%8C%81%E4%B9%85%E7%9A%84dns%E8%A7%A3%E6%9E%90%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <pubDate>Tue, 16 Jun 2020 03:06:29 +0800</pubDate>
+      
+      <guid>http://node.fenr.men/post/%E8%AE%BE%E7%BD%AE%E6%8C%81%E4%B9%85%E7%9A%84dns%E8%A7%A3%E6%9E%90%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ssh登录远程机器且不用密码</title>
+      <link>http://node.fenr.men/post/ssh%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%BA%E5%99%A8%E4%B8%94%E4%B8%8D%E7%94%A8%E5%AF%86%E7%A0%81/</link>
+      <pubDate>Mon, 30 Mar 2020 21:16:44 +0800</pubDate>
+      
+      <guid>http://node.fenr.men/post/ssh%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%BA%E5%99%A8%E4%B8%94%E4%B8%8D%E7%94%A8%E5%AF%86%E7%A0%81/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>系统从不同状态中恢复时启动脚本</title>
+      <link>http://node.fenr.men/post/%E7%B3%BB%E7%BB%9F%E4%BB%8E%E4%B8%8D%E5%90%8C%E7%8A%B6%E6%80%81%E4%B8%AD%E6%81%A2%E5%A4%8D%E6%97%B6%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC/</link>
+      <pubDate>Mon, 30 Mar 2020 18:24:46 +0800</pubDate>
+      
+      <guid>http://node.fenr.men/post/%E7%B3%BB%E7%BB%9F%E4%BB%8E%E4%B8%8D%E5%90%8C%E7%8A%B6%E6%80%81%E4%B8%AD%E6%81%A2%E5%A4%8D%E6%97%B6%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>启动时以当前用户身份运行脚本</title>
+      <link>http://node.fenr.men/post/%E5%90%AF%E5%8A%A8%E6%97%B6%E4%BB%A5%E5%BD%93%E5%89%8D%E7%94%A8%E6%88%B7%E8%BA%AB%E4%BB%BD%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC/</link>
+      <pubDate>Mon, 30 Mar 2020 15:54:42 +0800</pubDate>
+      
+      <guid>http://node.fenr.men/post/%E5%90%AF%E5%8A%A8%E6%97%B6%E4%BB%A5%E5%BD%93%E5%89%8D%E7%94%A8%E6%88%B7%E8%BA%AB%E4%BB%BD%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>启动时以root身份运行脚本</title>
+      <link>http://node.fenr.men/post/%E5%90%AF%E5%8A%A8%E6%97%B6%E4%BB%A5root%E8%BA%AB%E4%BB%BD%E8%BF%90%E8%A1%8C%E4%B8%80%E4%B8%AA%E8%84%9A%E6%9C%AC/</link>
+      <pubDate>Mon, 30 Mar 2020 14:16:32 +0800</pubDate>
+      
+      <guid>http://node.fenr.men/post/%E5%90%AF%E5%8A%A8%E6%97%B6%E4%BB%A5root%E8%BA%AB%E4%BB%BD%E8%BF%90%E8%A1%8C%E4%B8%80%E4%B8%AA%E8%84%9A%E6%9C%AC/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

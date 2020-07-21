@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据库 on </title>
+    <link>http://node.fenr.men/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+    <description>Recent content in 数据库 on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 17 Jun 2020 08:00:57 +0800</lastBuildDate>
+    
+	<atom:link href="http://node.fenr.men/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>什么是数据库的事务</title>
+      <link>http://node.fenr.men/post/%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E4%BA%8B%E5%8A%A1/</link>
+      <pubDate>Wed, 17 Jun 2020 08:00:57 +0800</pubDate>
+      
+      <guid>http://node.fenr.men/post/%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E4%BA%8B%E5%8A%A1/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
