@@ -23,7 +23,7 @@ contentCopyright: false
 
 ```bash
 sudo nano /etc/sysctl.conf
-fs.file_max = 1024000
+fs.file_max = 102400
 
 sudo nano /etc/security/limits.conf
 # add following lines to it
