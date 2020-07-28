@@ -155,14 +155,14 @@ fs.file_max <span class="o">=</span> <span class="m">1024000</span>
 
 sudo nano /etc/security/limits.conf
 <span class="c1"># add following lines to it</span>
-* soft        nproc          <span class="m">1024000</span>   
-* hard        nproc          <span class="m">1024000</span> 
-* soft        nofile         <span class="m">1024000</span> 
-* hard        nofile         <span class="m">1024000</span>
-root soft     nproc          <span class="m">1024000</span>  
-root hard     nproc          <span class="m">1024000</span>   
-root soft     nofile         <span class="m">1024000</span> 
-root hard     nofile         <span class="m">1024000</span>
+* soft        nproc          <span class="m">102400</span>   
+* hard        nproc          <span class="m">102400</span> 
+* soft        nofile         <span class="m">102400</span> 
+* hard        nofile         <span class="m">102400</span>
+root soft     nproc          <span class="m">102400</span>  
+root hard     nproc          <span class="m">102400</span>   
+root soft     nofile         <span class="m">102400</span> 
+root hard     nofile         <span class="m">102400</span>
 
 <span class="c1"># Then</span>
 sudo nano /etc/pam.d/common-session

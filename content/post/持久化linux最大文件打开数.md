@@ -27,14 +27,14 @@ fs.file_max = 1024000
 
 sudo nano /etc/security/limits.conf
 # add following lines to it
-* soft        nproc          1024000   
-* hard        nproc          1024000 
-* soft        nofile         1024000 
-* hard        nofile         1024000
-root soft     nproc          1024000  
-root hard     nproc          1024000   
-root soft     nofile         1024000 
-root hard     nofile         1024000
+* soft        nproc          102400   
+* hard        nproc          102400 
+* soft        nofile         102400 
+* hard        nofile         102400
+root soft     nproc          102400  
+root hard     nproc          102400   
+root soft     nofile         102400 
+root hard     nofile         102400
 
 # Then
 sudo nano /etc/pam.d/common-session
