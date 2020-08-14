@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.75.0-DEV with theme even" />
 
 
 <link rel="canonical" href="http://node.fenr.men/post/%E8%AE%BE%E7%BD%AE%E6%8C%81%E4%B9%85%E7%9A%84dns%E8%A7%A3%E6%9E%90%E6%9C%8D%E5%8A%A1%E5%99%A8/" />
@@ -46,13 +46,14 @@
 <meta property="article:modified_time" content="2020-06-16T03:06:29+08:00" />
 <meta itemprop="name" content="设置持久的DNS解析服务器">
 <meta itemprop="description" content="">
-<meta itemprop="datePublished" content="2020-06-16T03:06:29&#43;08:00" />
-<meta itemprop="dateModified" content="2020-06-16T03:06:29&#43;08:00" />
-<meta itemprop="wordCount" content="113">
+<meta itemprop="datePublished" content="2020-06-16T03:06:29+08:00" />
+<meta itemprop="dateModified" content="2020-06-16T03:06:29+08:00" />
+<meta itemprop="wordCount" content="108">
 
 
 
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="设置持久的DNS解析服务器"/>
 <meta name="twitter:description" content=""/>
 
@@ -131,7 +132,12 @@
     
     <div class="post-content">
       <h1 id="linux设置持久的dns解析服务器">Linux设置持久的DNS解析服务器</h1>
-<p>首先, 安装resolvconf, 这个包可以在每次启动的时候, 修改/etc/resolv.conf文件, 持久化用户的nameserver设置</p>
+<ul>
+<li>
+<p>系统: Ubuntu 20.04 LTS</p>
+<p>方法一: resolvconf, 这个包可以在每次启动的时候, 修改/etc/resolv.conf文件, 持久化用户的nameserver设置</p>
+</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1

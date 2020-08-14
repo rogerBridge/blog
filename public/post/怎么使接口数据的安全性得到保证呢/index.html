@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.75.0-DEV with theme even" />
 
 
 <link rel="canonical" href="http://node.fenr.men/post/%E6%80%8E%E4%B9%88%E4%BD%BF%E6%8E%A5%E5%8F%A3%E6%95%B0%E6%8D%AE%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7%E5%BE%97%E5%88%B0%E4%BF%9D%E8%AF%81%E5%91%A2/" />
@@ -46,13 +46,14 @@
 <meta property="article:modified_time" content="2020-06-16T16:24:06+08:00" />
 <meta itemprop="name" content="怎么使接口数据的安全性得到保证呢">
 <meta itemprop="description" content="">
-<meta itemprop="datePublished" content="2020-06-16T16:24:06&#43;08:00" />
-<meta itemprop="dateModified" content="2020-06-16T16:24:06&#43;08:00" />
-<meta itemprop="wordCount" content="80">
+<meta itemprop="datePublished" content="2020-06-16T16:24:06+08:00" />
+<meta itemprop="dateModified" content="2020-06-16T16:24:06+08:00" />
+<meta itemprop="wordCount" content="108">
 
 
 
-<meta itemprop="keywords" content="接口安全," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="接口安全," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="怎么使接口数据的安全性得到保证呢"/>
 <meta name="twitter:description" content=""/>
 
@@ -128,8 +129,12 @@
 
     
     <div class="post-content">
-      <ol>
-<li>md5(args+salt), 附带在request body里面, 或者request header里面, 不过加密方法在前端, 很容易被反编译</li>
+      <h1 id="如何保证接口数据的安全性">如何保证接口数据的安全性?</h1>
+<ul>
+<li>太难了, 既要防止中间人获取用户数据, 又要防止用户抓包服务器的数据</li>
+</ul>
+<ol>
+<li>encrypt method(args+salt), 附带在request body里面, 或者request header里面</li>
 <li>参数加密, 和1差不多, 也容易被反编译</li>
 <li>Token, Session-Cookie, 过滤无效请求</li>
 <li>https</li>

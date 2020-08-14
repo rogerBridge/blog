@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.75.0-DEV with theme even" />
 
 
 <link rel="canonical" href="http://node.fenr.men/post/ssh%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%BA%E5%99%A8%E4%B8%94%E4%B8%8D%E7%94%A8%E5%AF%86%E7%A0%81/" />
@@ -46,13 +46,14 @@
 <meta property="article:modified_time" content="2020-03-30T21:16:44+08:00" />
 <meta itemprop="name" content="Ssh登录远程机器且不用密码">
 <meta itemprop="description" content="">
-<meta itemprop="datePublished" content="2020-03-30T21:16:44&#43;08:00" />
-<meta itemprop="dateModified" content="2020-03-30T21:16:44&#43;08:00" />
-<meta itemprop="wordCount" content="115">
+<meta itemprop="datePublished" content="2020-03-30T21:16:44+08:00" />
+<meta itemprop="dateModified" content="2020-03-30T21:16:44+08:00" />
+<meta itemprop="wordCount" content="123">
 
 
 
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ssh登录远程机器且不用密码"/>
 <meta name="twitter:description" content=""/>
 
@@ -132,12 +133,35 @@
     <div class="post-content">
       <h1 id="ssh登录远程机器且不用密码登录的方式">SSH登录远程机器且不用密码登录的方式</h1>
 <p>首先, 创建一个公钥秘钥对</p>
-<p><code>ssh-keygen -t ecdsa -b 521 # ecdsa 通常更安全+体积小</code></p>
-<p>然后, 将生成的文件添加到远程机器的authorized_keys文件下</p>
-<p><code>cat ~/.ssh/id_rsa.pub | ssh a@A 'cat &gt;&gt; .ssh/authorized_keys'</code></p>
-<p>或者</p>
-<p><code>ssh-copy-id -i ~/.ssh/id_rsa.pub a@A</code></p>
-<p>Finally, ssh登录远程机器就不用输入密码啦~</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># type ecdsa -b(bit length) 521 bit</span>
+ssh-keygen -t ecdsa -b <span class="m">521</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>然后, 将生成的文件添加到远程机器的authorized_keys文件下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">cat ~/.ssh/id_rsa.pub | ssh a@A &#39;cat &gt;&gt; .ssh/authorized_keys&#39;
+</code></pre></td></tr></table>
+</div>
+</div><p>或者</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ssh-copy-id -i <span class="o">[</span>public key file path<span class="o">]</span> <span class="o">[</span>userName<span class="o">]</span>@<span class="o">[</span>hostAddress<span class="o">]</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>配置完成后, SSH登录远程机器就不用输入密码啦!</p>
     </div>
 
     

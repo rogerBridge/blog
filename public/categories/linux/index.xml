@@ -6,11 +6,7 @@
     <description>Recent content in Linux on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 16 Jun 2020 03:06:29 +0800</lastBuildDate>
-    
-	<atom:link href="http://node.fenr.men/categories/linux/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 16 Jun 2020 03:06:29 +0800</lastBuildDate><atom:link href="http://node.fenr.men/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>设置持久的DNS解析服务器</title>
       <link>http://node.fenr.men/post/%E8%AE%BE%E7%BD%AE%E6%8C%81%E4%B9%85%E7%9A%84dns%E8%A7%A3%E6%9E%90%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>

@@ -20,8 +20,12 @@ hiddenFromHomePage: false
 contentCopyright: false
 ---
 <!--more-->
+
 # Linux设置持久的DNS解析服务器
-首先, 安装resolvconf, 这个包可以在每次启动的时候, 修改/etc/resolv.conf文件, 持久化用户的nameserver设置
+- 系统: Ubuntu 20.04 LTS
+
+  方法一: resolvconf, 这个包可以在每次启动的时候, 修改/etc/resolv.conf文件, 持久化用户的nameserver设置
+
 ```bash
 sudo apt update
 sudo apt install resolvconf

@@ -21,6 +21,8 @@ contentCopyright: false
 ---
 <!--more-->
 
+# 持久话Linux最大文件打开数量
+
 ```bash
 sudo nano /etc/sysctl.conf
 fs.file_max = 102400

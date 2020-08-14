@@ -6,11 +6,7 @@
     <description>Recent content in Categories on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 17 Jun 2020 08:00:57 +0800</lastBuildDate>
-    
-	<atom:link href="http://node.fenr.men/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 17 Jun 2020 08:00:57 +0800</lastBuildDate><atom:link href="http://node.fenr.men/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>数据库</title>
       <link>http://node.fenr.men/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
