@@ -1,5 +1,5 @@
 ---
-title: "Ssh登录远程机器且不用密码"
+title: "SSH登录远程机器设置方式"
 date: 2020-03-30T21:16:44+08:00
 lastmod: 2020-03-30T21:16:44+08:00
 draft: false
@@ -20,8 +20,6 @@ hiddenFromHomePage: false
 contentCopyright: false
 ---
 <!--more-->
-
-# SSH登录远程机器且不用密码登录的方式
 
 首先, 创建一个公钥秘钥对
 

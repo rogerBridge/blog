@@ -20,7 +20,6 @@ hiddenFromHomePage: false
 contentCopyright: false
 ---
 <!--more-->
-# 在开机启动时以root身份执行脚本
 
 请出我们的systemd service
 

@@ -1,5 +1,5 @@
 ---
-title: "URL之加斜杠和不加斜杠"
+title: "URL加斜杠与不加斜杠"
 date: 2020-06-13T22:57:42+08:00
 lastmod: 2020-06-13T22:57:42+08:00
 draft: false
@@ -20,7 +20,6 @@ hiddenFromHomePage: false
 contentCopyright: false
 ---
 <!--more-->
-# URL之到底加不加斜杠呢？
 
 
 实际上url加斜杠和不加斜杠是两个不同的东西，比如：

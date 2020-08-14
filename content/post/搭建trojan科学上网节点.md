@@ -1,5 +1,5 @@
 ---
-title: "搭建trojan科学上网节点"
+title: "搭建Trojan科学上网节点"
 date: 2020-03-30T14:07:23+08:00
 lastmod: 2020-03-30T14:07:23+08:00
 draft: false
@@ -20,7 +20,7 @@ hiddenFromHomePage: false
 contentCopyright: false
 ---
 <!--more-->
-# 搭建Trojan科学上网节点
+
 + trojan是什么?
 
   trojan是一款科学上网工具

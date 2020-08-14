@@ -1,5 +1,5 @@
 ---
-title: "持久化linux最大文件打开数"
+title: "持久化Linux最大文件打开数"
 date: 2020-07-27T21:41:50+08:00
 lastmod: 2020-07-27T21:41:50+08:00
 draft: false
@@ -20,8 +20,6 @@ hiddenFromHomePage: false
 contentCopyright: false
 ---
 <!--more-->
-
-# 持久话Linux最大文件打开数量
 
 ```bash
 sudo nano /etc/sysctl.conf

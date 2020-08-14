@@ -8,7 +8,7 @@
     <language>zh-cn</language>
     <lastBuildDate>Tue, 16 Jun 2020 03:06:29 +0800</lastBuildDate><atom:link href="http://node.fenr.men/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>设置持久的DNS解析服务器</title>
+      <title>Linux下设置持久的DNS解析服务器</title>
       <link>http://node.fenr.men/post/%E8%AE%BE%E7%BD%AE%E6%8C%81%E4%B9%85%E7%9A%84dns%E8%A7%A3%E6%9E%90%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
       <pubDate>Tue, 16 Jun 2020 03:06:29 +0800</pubDate>
       
@@ -17,7 +17,7 @@
     </item>
     
     <item>
-      <title>Ssh登录远程机器且不用密码</title>
+      <title>SSH登录远程机器设置方式</title>
       <link>http://node.fenr.men/post/ssh%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%BA%E5%99%A8%E4%B8%94%E4%B8%8D%E7%94%A8%E5%AF%86%E7%A0%81/</link>
       <pubDate>Mon, 30 Mar 2020 21:16:44 +0800</pubDate>
       

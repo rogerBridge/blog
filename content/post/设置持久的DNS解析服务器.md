@@ -1,5 +1,5 @@
 ---
-title: "设置持久的DNS解析服务器"
+title: "Linux下设置持久的DNS解析服务器"
 date: 2020-06-16T03:06:29+08:00
 lastmod: 2020-06-16T03:06:29+08:00
 draft: false
@@ -21,7 +21,6 @@ contentCopyright: false
 ---
 <!--more-->
 
-# Linux设置持久的DNS解析服务器
 - 系统: Ubuntu 20.04 LTS
 
   方法一: resolvconf, 这个包可以在每次启动的时候, 修改/etc/resolv.conf文件, 持久化用户的nameserver设置
