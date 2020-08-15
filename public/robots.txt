@@ -1,1 +1,2 @@
 User-agent: *
+Sitemap: http://node.fenr.men/sitemap.xml
