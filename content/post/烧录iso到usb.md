@@ -1,0 +1,34 @@
+---
+title: "烧录ISO到USB设备上"
+date: 2020-08-31T10:16:09+08:00
+lastmod: 2020-08-31T10:16:09+08:00
+draft: false
+keywords: []
+description: ""
+tags: []
+categories: []
+author: ""
+
+# You can also close(false) or open(true) something for this content.
+# P.S. comment can only be closed
+comment: false
+toc: false
+autoCollapseToc: false
+postMetaInFooter: false
+hiddenFromHomePage: false
+# You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
+contentCopyright: false
+---
+<!--more-->
+在Linux环境下, 如何烧录ISO启动盘到一个USB设备上呢?
+
+```bash
+# assume you are in sudo user group
+# assume your usb device is /dev/sdx
+umount /dev/sdx;
+# assume you want your USB file system is fat
+sudo mkfs.vfat /dev/sdx -I
+# start dd ISO to USB
+dd if='ISO file location' of=/dev/sdx bs=4M && sync;
+# wait it finish, bingo :)
+```
