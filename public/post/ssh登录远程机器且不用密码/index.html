@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>SSH登录远程机器设置方式 - </title>
+  <title>SSH登录Ubuntu Server的设置方式 - </title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="leo2n" /><meta name="description" content="" />
+<meta name="author" content="leo" /><meta name="description" content="登录远程服务器的方式之一" /><meta name="keywords" content="SSH" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.75.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.80.0-DEV with theme even" />
 
 
 <link rel="canonical" href="http://node.fenr.men/post/ssh%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%BA%E5%99%A8%E4%B8%94%E4%B8%8D%E7%94%A8%E5%AF%86%E7%A0%81/" />
@@ -35,28 +35,28 @@
 
 
 
-<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link href="/sass/main.min.651e6917abb0239242daa570c2bec9867267bbcd83646da5a850afe573347b44.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="SSH登录远程机器设置方式" />
-<meta property="og:description" content="" />
+<meta property="og:title" content="SSH登录Ubuntu Server的设置方式" />
+<meta property="og:description" content="登录远程服务器的方式之一" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://node.fenr.men/post/ssh%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%BA%E5%99%A8%E4%B8%94%E4%B8%8D%E7%94%A8%E5%AF%86%E7%A0%81/" />
 <meta property="article:published_time" content="2020-03-30T21:16:44+08:00" />
 <meta property="article:modified_time" content="2020-03-30T21:16:44+08:00" />
-<meta itemprop="name" content="SSH登录远程机器设置方式">
-<meta itemprop="description" content="">
+<meta itemprop="name" content="SSH登录Ubuntu Server的设置方式">
+<meta itemprop="description" content="登录远程服务器的方式之一">
 <meta itemprop="datePublished" content="2020-03-30T21:16:44+08:00" />
 <meta itemprop="dateModified" content="2020-03-30T21:16:44+08:00" />
-<meta itemprop="wordCount" content="104">
+<meta itemprop="wordCount" content="152">
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="SSH,Linux," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="SSH登录远程机器设置方式"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="SSH登录Ubuntu Server的设置方式"/>
+<meta name="twitter:description" content="登录远程服务器的方式之一"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -119,7 +119,7 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">SSH登录远程机器设置方式</h1>
+      <h1 class="post-title">SSH登录Ubuntu Server的设置方式</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2020-03-30 </span>
@@ -137,9 +137,11 @@
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
+</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># type ecdsa -b(bit length) 521 bit</span>
+<span class="c1"># ECDSA 是一个较短bit产生高强度的公钥-私钥对的方式</span>
 ssh-keygen -t ecdsa -b <span class="m">521</span>
 </code></pre></td></tr></table>
 </div>
@@ -149,7 +151,7 @@ ssh-keygen -t ecdsa -b <span class="m">521</span>
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">cat ~/.ssh/id_rsa.pub | ssh a@A &#39;cat &gt;&gt; .ssh/authorized_keys&#39;
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">cat ~/.ssh/{{ name you generated }}.pub | ssh a@A &#39;cat &gt;&gt; .ssh/authorized_keys&#39;
 </code></pre></td></tr></table>
 </div>
 </div><p>或者</p>
@@ -158,15 +160,27 @@ ssh-keygen -t ecdsa -b <span class="m">521</span>
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">ssh-copy-id -i <span class="o">[</span>public key file path<span class="o">]</span> <span class="o">[</span>userName<span class="o">]</span>@<span class="o">[</span>hostAddress<span class="o">]</span>
+<pre class="chroma"><code class="language-bash" data-lang="bash">ssh-copy-id -i <span class="o">[</span>public key file path<span class="o">]</span> <span class="o">[</span>userName<span class="o">]</span>@<span class="o">[</span>hostAddress<span class="o">]</span>:~/.ssh/
 </code></pre></td></tr></table>
 </div>
-</div><p>配置完成后, SSH登录远程机器就不用输入密码啦!</p>
+</div><p>配置完成后, SSH登录远程机器就不用输入密码啦, 直接可以使用SSH方式连接</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ssh <span class="o">{{</span>username<span class="o">}}</span>@<span class="o">{{</span>host<span class="o">}}</span> -i <span class="o">{{</span>privKey<span class="o">}}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
     </div>
 
     
 <footer class="post-footer">
-      
+      <div class="post-tags">
+          <a href="/tags/ssh/">SSH</a>
+          <a href="/tags/linux/">Linux</a>
+          </div>
       <nav class="post-nav">
         <a class="prev" href="/post/url%E4%B9%8B%E5%8A%A0%E6%96%9C%E6%9D%A0%E5%92%8C%E4%B8%8D%E5%8A%A0%E6%96%9C%E6%9D%A0/">
             <i class="iconfont icon-left"></i>

@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.75.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.80.0-DEV with theme even" />
 
 
 <link rel="canonical" href="http://node.fenr.men/post/%E5%90%AF%E5%8A%A8%E6%97%B6%E4%BB%A5%E5%BD%93%E5%89%8D%E7%94%A8%E6%88%B7%E8%BA%AB%E4%BB%BD%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC/" />
@@ -35,7 +35,7 @@
 
 
 
-<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link href="/sass/main.min.651e6917abb0239242daa570c2bec9867267bbcd83646da5a850afe573347b44.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -49,7 +49,7 @@
 <meta itemprop="description" content="">
 <meta itemprop="datePublished" content="2020-03-30T15:54:42+08:00" />
 <meta itemprop="dateModified" content="2020-03-30T15:54:42+08:00" />
-<meta itemprop="wordCount" content="83">
+<meta itemprop="wordCount" content="84">
 
 
 
@@ -133,7 +133,7 @@
     
     <div class="post-content">
       <p>请出我们的crontab</p>
-<p>作为一款定时任务执行工具, 重启时的脚本运行, 只是它一个小小的功能罢了~</p>
+<p>作为一款定时任务执行工具, 重启时的脚本运行, 是他功能中的一个(定时任务执行)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -143,7 +143,7 @@
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash">crontab -e <span class="c1"># 不要加sudo, 是当前用户的身份</span>
 <span class="c1"># 进入编辑器模式后</span>
-@reboot <span class="o">{</span>bin directory<span class="o">}</span> <span class="o">{</span>scripts directory<span class="o">}</span>
+@reboot <span class="o">{</span><span class="nb">exec</span> directory<span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
 </div>

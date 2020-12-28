@@ -1,8 +1,8 @@
 ---
-title: "Docker旅途中的故事"
-date: 2020-07-22T12:44:04+08:00
-lastmod: 2020-07-22T12:44:04+08:00
-draft: true
+title: "Markdown学习"
+date: 2020-12-14T20:21:42+08:00
+lastmod: 2020-12-14T20:21:42+08:00
+draft: false
 keywords: []
 description: ""
 tags: []
@@ -20,10 +20,3 @@ hiddenFromHomePage: false
 contentCopyright: false
 ---
 <!--more-->
-- 自定义时区的方法
-
-    1. 在Dockerfile 里面添加如下字段: 
-    
-    ```shell
-    ENV TZ=Asia/Shanghai
-    ```

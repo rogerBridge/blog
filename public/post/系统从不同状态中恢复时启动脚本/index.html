@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.75.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.80.0-DEV with theme even" />
 
 
 <link rel="canonical" href="http://node.fenr.men/post/%E7%B3%BB%E7%BB%9F%E4%BB%8E%E4%B8%8D%E5%90%8C%E7%8A%B6%E6%80%81%E4%B8%AD%E6%81%A2%E5%A4%8D%E6%97%B6%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC/" />
@@ -35,7 +35,7 @@
 
 
 
-<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link href="/sass/main.min.651e6917abb0239242daa570c2bec9867267bbcd83646da5a850afe573347b44.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -49,7 +49,7 @@
 <meta itemprop="description" content="">
 <meta itemprop="datePublished" content="2020-03-30T18:24:46+08:00" />
 <meta itemprop="dateModified" content="2020-03-30T18:24:46+08:00" />
-<meta itemprop="wordCount" content="130">
+<meta itemprop="wordCount" content="136">
 
 
 
@@ -147,20 +147,24 @@
 </span><span class="lnt">10
 </span><span class="lnt">11
 </span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-fallback" data-lang="fallback">[Unit]
 Description=Run my scripts
-After=suspend.target # 在suspend之后执行
-#After=hibernate.target
-#After=hybrid-sleep.target
+# After=suspend.target # 在suspend之后执行
+After=hibernate.target
+# After=hybrid-sleep.target
+
 [Service]
-ExecStart=/some/path/myscripttorun
+ExecStart=/some/path/run/yourScript
+
 [Install]
 WantedBy=default.target # 启动时引导至unit
-WantedBy=suspend.target # suspend时引导至unit
-#WantedBy=hibernate.target
-#WantedBy=hybrid-sleep.target
+# WantedBy=suspend.target # suspend时引导至unit
+WantedBy=hibernate.target
+# WantedBy=hybrid-sleep.target
 </code></pre></td></tr></table>
 </div>
 </div>
@@ -172,7 +176,7 @@ WantedBy=suspend.target # suspend时引导至unit
       <nav class="post-nav">
         <a class="prev" href="/post/ssh%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%BA%E5%99%A8%E4%B8%94%E4%B8%8D%E7%94%A8%E5%AF%86%E7%A0%81/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">SSH登录远程机器设置方式</span>
+            <span class="prev-text nav-default">SSH登录Ubuntu Server的设置方式</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
         <a class="next" href="/post/%E5%90%AF%E5%8A%A8%E6%97%B6%E4%BB%A5%E5%BD%93%E5%89%8D%E7%94%A8%E6%88%B7%E8%BA%AB%E4%BB%BD%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC/">
