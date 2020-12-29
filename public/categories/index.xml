@@ -6,7 +6,16 @@
     <description>Recent content in Categories on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 17 Jun 2020 08:00:57 +0800</lastBuildDate><atom:link href="http://node.fenr.men/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Dec 2020 20:56:09 +0800</lastBuildDate><atom:link href="http://node.fenr.men/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>其他</title>
+      <link>http://node.fenr.men/categories/%E5%85%B6%E4%BB%96/</link>
+      <pubDate>Tue, 29 Dec 2020 20:56:09 +0800</pubDate>
+      
+      <guid>http://node.fenr.men/categories/%E5%85%B6%E4%BB%96/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>数据库</title>
       <link>http://node.fenr.men/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
