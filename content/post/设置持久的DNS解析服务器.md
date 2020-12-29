@@ -28,6 +28,6 @@ contentCopyright: false
 ```bash
 sudo apt update
 sudo apt install resolvconf
-nano /etc/resolvconf/resolv.conf.d/head # add nameserver 119.29.29.29
+sudo nano /etc/resolvconf/resolv.conf.d/head # add nameserver 119.29.29.29
 sudo systemctl restart resolvconf.service # Then logout and login
 ```
