@@ -21,5 +21,5 @@ contentCopyright: false
 ---
 <!--more-->
 
-# Markdown - Typora 学习记录
+# Markdown - Typora 学习
 
