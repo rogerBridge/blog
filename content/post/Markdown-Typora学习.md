@@ -1,5 +1,5 @@
 ---
-title: "Markdown学习"
+title: "Markdown-Typora学习[ing]"
 date: 2020-12-14T20:21:42+08:00
 lastmod: 2020-12-14T20:21:42+08:00
 draft: false
@@ -20,6 +20,3 @@ hiddenFromHomePage: false
 contentCopyright: false
 ---
 <!--more-->
-
-# Markdown - Typora 学习
-
