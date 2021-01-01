@@ -1,5 +1,5 @@
 ---
-title: "Redis基础知识"
+title: "Redis基础知识[ing]"
 date: 2021-01-01T10:14:57+08:00
 lastmod: 2021-01-01T10:14:57+08:00
 draft: false
