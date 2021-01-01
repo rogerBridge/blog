@@ -6,22 +6,40 @@
     <description>Recent content in Categories on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 29 Dec 2020 20:56:09 +0800</lastBuildDate><atom:link href="http://node.fenr.men/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Jan 2021 10:14:57 +0800</lastBuildDate><atom:link href="http://node.fenr.men/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>其他</title>
-      <link>http://node.fenr.men/categories/%E5%85%B6%E4%BB%96/</link>
-      <pubDate>Tue, 29 Dec 2020 20:56:09 +0800</pubDate>
+      <title>Redis</title>
+      <link>http://node.fenr.men/categories/redis/</link>
+      <pubDate>Fri, 01 Jan 2021 10:14:57 +0800</pubDate>
       
-      <guid>http://node.fenr.men/categories/%E5%85%B6%E4%BB%96/</guid>
+      <guid>http://node.fenr.men/categories/redis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>数据库</title>
       <link>http://node.fenr.men/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
-      <pubDate>Wed, 17 Jun 2020 08:00:57 +0800</pubDate>
+      <pubDate>Fri, 01 Jan 2021 10:12:40 +0800</pubDate>
       
       <guid>http://node.fenr.men/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>基础知识</title>
+      <link>http://node.fenr.men/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</link>
+      <pubDate>Fri, 01 Jan 2021 10:09:49 +0800</pubDate>
+      
+      <guid>http://node.fenr.men/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>其他</title>
+      <link>http://node.fenr.men/categories/%E5%85%B6%E4%BB%96/</link>
+      <pubDate>Tue, 29 Dec 2020 20:56:09 +0800</pubDate>
+      
+      <guid>http://node.fenr.men/categories/%E5%85%B6%E4%BB%96/</guid>
       <description></description>
     </item>
     
