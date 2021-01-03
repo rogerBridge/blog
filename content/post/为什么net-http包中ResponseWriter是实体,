@@ -1,0 +1,9 @@
+---
+title: "go net/http 包问题汇总[ing]"
+date: 2021-01-03T19:23:28+08:00
+draft: true
+---
+1. 为什么http.Request参数是指针?
+因为http.ResponseWriter是一个接口, 而http.Request是一个结构体, go中的传参, 对一个struct来说, 是复制, 这不好, 因为修改并没有反馈到需要修改的结构体上, 所以传个指针;
+http.ResponseWriter这个接口类似指针, 指针的指针, go中是不允许的;
+为什么http.ResponseWriter类似指针呢? 我不知道 :( 
