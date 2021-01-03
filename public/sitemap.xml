@@ -3,21 +3,35 @@
   
   <url>
     <loc>http://node.fenr.men/</loc>
-    <lastmod>2021-01-01T10:14:57+08:00</lastmod>
+    <lastmod>2021-01-03T19:35:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://node.fenr.men/categories/</loc>
-    <lastmod>2021-01-01T10:14:57+08:00</lastmod>
+    <lastmod>2021-01-03T19:35:30+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://node.fenr.men/categories/golang/</loc>
+    <lastmod>2021-01-03T19:35:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://node.fenr.men/post/</loc>
-    <lastmod>2021-01-01T10:14:57+08:00</lastmod>
+    <lastmod>2021-01-03T19:35:30+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://node.fenr.men/post/%E5%8E%86%E5%8F%B2%E9%97%AE%E9%A2%98%E4%B8%80%E4%B8%A2%E4%B8%A2/</loc>
+    <lastmod>2021-01-03T19:35:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
