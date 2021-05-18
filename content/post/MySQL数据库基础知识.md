@@ -1,5 +1,5 @@
 ---
-title: "MySQL数据库基础知识[ing]"
+title: "MySQL数据库基础知识"
 date: 2021-01-01T10:12:40+08:00
 lastmod: 2021-01-01T10:12:40+08:00
 draft: false

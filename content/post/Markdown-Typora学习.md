@@ -1,5 +1,5 @@
 ---
-title: "Markdown-Typora学习[ing]"
+title: "Markdown-Typora学习"
 date: 2020-12-14T20:21:42+08:00
 lastmod: 2020-12-14T20:21:42+08:00
 draft: false
@@ -53,6 +53,8 @@ contentCopyright: false
 
 
 
+
+
 ![精美壁纸](https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba)
 
 ## Typora其他
@@ -75,7 +77,7 @@ Go语言的特点就是: ==简单明了==
 
 ## 流程图
 
-- Flowchart
+- Flowchartf
 
 - 学习站点: [mermaid](https://mermaid-js.github.io/mermaid/#/flowchart)
 

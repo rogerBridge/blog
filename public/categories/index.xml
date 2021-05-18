@@ -6,16 +6,7 @@
     <description>Recent content in Categories on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 03 Jan 2021 19:35:30 +0800</lastBuildDate><atom:link href="http://node.fenr.men/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Golang</title>
-      <link>http://node.fenr.men/categories/golang/</link>
-      <pubDate>Sun, 03 Jan 2021 19:35:30 +0800</pubDate>
-      
-      <guid>http://node.fenr.men/categories/golang/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Fri, 01 Jan 2021 10:14:57 +0800</lastBuildDate><atom:link href="http://node.fenr.men/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Redis</title>
       <link>http://node.fenr.men/categories/redis/</link>
