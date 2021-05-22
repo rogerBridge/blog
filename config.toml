@@ -1,4 +1,4 @@
-baseURL = "http://node.fenr.men"
+baseURL = "https://log.fenr.men"
 languageCode = "en"
 defaultContentLanguage = "zh-cn"                             # en / zh-cn / ... (This field determines which i18n file to use)
 title = ""
