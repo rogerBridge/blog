@@ -6,7 +6,7 @@ draft: false
 keywords: []
 description: ""
 tags: []
-categories: ["科学上网"]
+categories: ["GFW"]
 author: ""
 
 # You can also close(false) or open(true) something for this content.
