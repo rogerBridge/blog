@@ -20,5 +20,4 @@ hiddenFromHomePage: false
 contentCopyright: false
 ---
 <!--more-->
-
-
+目前, 主流的翻墙方式有两种, 一种是加密, 一种是伪装, 这里推荐伪装.
