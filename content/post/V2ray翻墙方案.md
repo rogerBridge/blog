@@ -26,13 +26,11 @@ contentCopyright: false
 
 最好的方式其实是将自己藏匿于人群中, 你可以使用明面上的https流量, 域名指向你的网站, 但是, 接收到你的请求的web服务器会从你的请求URI中判断(URI是不会被GFW查看到的, 例如: 你的网站是: mydomain.com, 请求URI是: /say, 那么这个/say是不会被GFW查看到的, 可以知晓的仅仅是: mydomain.com, 为什么呢? 因为SNI在建立TLS连接的时候, 仅仅暴露了目标域名, 如果连目标域名都不想暴露的话, 就得使用ESNI), 你到底是想要查看自己的网站, 还是想访问特定的web app, Web Server会根据你的URI来判断, 流程图如下:
 
-![](./v2ray翻墙方案.images/proxy.png)
+![](/img/V2ray翻墙方案/proxy.png)
 
 过程如下:
 
-本地设备与Web服务器建立TLS连接, Web服务器通过查看设备的URI, 将请求转发至不同的App, 下面是服务器的配置(为了简单, 这里我们使用
-
-[Caddy](https://github.com/caddyserver/caddy) 服务器, 并且假设我们将v2ray App 配置在localhost:10000
+本地设备与Web服务器建立TLS连接, Web服务器通过查看设备的URI, 将请求转发至不同的App, 下面是服务器的配置(为了简单, 这里我们使用[Caddy](https://github.com/caddyserver/caddy) 服务器, 并且假设我们将v2ray App 配置在localhost:10000)
 
 
 
@@ -85,8 +83,6 @@ docker run -d \
     caddy
 
 ```
-
----
 
 
 
