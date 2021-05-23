@@ -32,7 +32,7 @@ contentCopyright: true
 2. 使用docker部署, 未来将改为docker compose, 更加便捷
 3. (可选) 如果你不信任自己的VPS提供商, 担心会被记录访问站点, 可以用第一层VPS做跳板, 跳转到第二层VPS
 
-最好的方式其实是将自己藏匿于人群中, 你可以使用明面上的 https 流量, 域名指向你的网站, 但是, 接收到你的请求的 web 服务器会从你的请求 URI 中判断(URI 是不会被 GFW 查看到的, 例如: 你的网站是: mydomain.com, 请求 URI 是: /say, 那么这个/say 是不会被 GFW 查看到的, 可以知晓的仅仅是: mydomain.com, 为什么呢? 因为 SNI 在建立 TLS 连接的时候, 仅仅暴露了目标域名, 如果连目标域名都不想暴露的话, 就得使用 ESNI), 你到底是想要查看自己的网站, 还是想访问特定的 web app, Web Server 会根据你的 URI 来判断, 流程图如下:
+最好的方式其实是将自己藏匿于人群中, 你可以使用明面上的 https 流量, 域名指向你的网站, 但是, 接收到你的请求的 web 服务器会从你的请求 URI 中判断(URI 是不会被 GFW 查看到的, 例如: 你的网站是: mydomain.com, 请求 URI 是: /say, 那么这个/say 是不会被 GFW 查看到的, 可以知晓的仅仅是: mydomain.com, 为什么呢? 因为 client 在建立 TLS 连接的时候, 仅仅暴露了目标域名, 如果连目标域名都不想暴露的话, 就得使用 ESNI, 可惜, 国内目前不支持ESNI), 你到底是想要查看自己的网站, 还是想访问特定的 web app, Web Server 会根据你的 URI 来判断, 流程图如下:
 
 ![](/img/V2ray科学上网方案/proxy.png)
 
