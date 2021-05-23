@@ -167,8 +167,8 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     enable = false
     options = ""            # default: "{theme: 'simple'}"
 
-  [params.busuanzi]         # count web traffic by busuanzi                             # 是否使用不蒜子统计站点访问量
-    enable = true
+  [params.busuanzi]         # 是否使用不蒜子统计站点访问量, 暴露隐私, 关掉
+    enable = false
     siteUV = true
     sitePV = true
     pagePV = true
