@@ -74,6 +74,8 @@ your.domain {
 
 使用 docker 方式启动 Caddy
 
+
+
 **runCaddy.sh**
 
 ```bash
@@ -95,6 +97,9 @@ docker run -d \
 ### Server Side
 
 v2ray App 的配置放在 docker 中, 配置文件如下:
+
+
+
 **config.json**
 
 ```bash
@@ -128,6 +133,9 @@ v2ray App 的配置放在 docker 中, 配置文件如下:
   }
 ```
 使用docker的方式启动V2ray
+
+
+
 **runV2rayApp.sh**
 
 ```bash
@@ -287,6 +295,10 @@ docker run -d \
 
 ```
 
+本地docker执行V2ray客户端:
+
+
+
 **runV2rayClient.sh**
 
 ```bash
@@ -304,3 +316,88 @@ docker run -d --name v2ray \
 ```
 
 这里就初步完成了, 可以测试一下
+
+
+
+## 添加第二层代理
+
+不幸的是, 大多数情况下, 只有腾讯云和阿里云的VPS才满足速度高的特点, 其他好用的VPS过段时间也就渐渐不好用了, 但是如果忌惮阿里云和腾讯云记录访问域名的话, 那还是以阿里云作为中转节点, 访问其他的VPS, 例如: AWS lightsail, DO, Vultr等, 流程图如下:
+
+![](/img/V2ray科学上网方案/proxy2.png)
+
+第二层代理, 如果追求安全的话, 还是使用https+ws为佳, 我这里偷懒了, 只使用了vmess, (其实这样第一层VPS的服务商只能看到你和第二层VPS之间建立了vmess连接, 具体访问了什么域名, 它们是不知道的, 当然, 如果还要追求安全, 建议dd阿里云的linux系统, 换成你自己信得过的, 没有安装监控的linux系统.) 
+
+修改第一层VPS中的v2ray配置文件和设置第二层VPS中的v2ray配置文件.
+
+首先, 修改 **第一层VPS中的v2ray配置文件**
+
+```json
+    // 需要修改的是outbounds部分
+    "outbounds": [
+      {
+        "protocol": "vmess", // 出口协议
+        "settings": {
+          "vnext": [
+            {
+              "address": "your.domain", // 服务器地址，请修改为你自己的服务器 IP 或域名, 最好写成不会被审查的IaaS Server
+              "port": 8080,  // 服务器端口, 自己随意指定
+              "users": [
+                {
+                  "id": "",  // uuid，必须与第二层VPS配置相同
+                  "alterId": 64 // 此处的值也应当与服务器相同
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+```
+
+在第二层VPS上, 部署V2ray App
+
+
+
+**config.json**
+
+```json
+{
+    "inbounds": [
+        {
+          "port": 8080,
+          "protocol": "vmess",
+          "settings": {
+            "clients": [
+              {
+                "id": "", // uuid, 必须和第一层VPS:outbounds的uuid相同
+                "alterId": 64
+              }
+            ]
+        }}
+    ],
+    "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+    ]
+}
+```
+
+
+
+**runV2ray.sh**
+
+```bash
+#!/bin/bash
+docker run -d \
+  --name v2rayServer \
+  -v $(configDir):/etc/v2ray \
+  --restart=always \
+  -p 8080:8080 \
+  v2fly/v2fly-core v2ray -config=/etc/v2ray/config.json
+```
+
+跑起来后,  大功告成~
+
+这样会大大增加延迟, 如果你是为了打游戏之类的低延迟的应用, 那么在第一层VPS上开一个单独的应用就好
