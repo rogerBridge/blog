@@ -40,28 +40,28 @@ contentCopyright: false
 
 ```
 your.domain {
-	root *  /usr/share/caddy
-	encode zstd gzip
-	file_server
+    root *  /usr/share/caddy
+    encode zstd gzip
+    file_server
 
-	log {
-		output file /etc/caddy/caddy.log
+    log {
+	    output file /etc/caddy/caddy.log
 	}
 
     tls {
-		protocols tls1.3
-		ciphers TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
-		curves x25519
-	}	
-	
-	# 这里就是我们的v2ray App, URI 设定为/youWant
-	@v2ray_websocket {
+	    protocols tls1.3
+	    ciphers TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+	    curves x25519
+	}
+    
+    # 这里就是我们的v2ray App, URI 设定为/youWant
+    @v2ray_websocket {
 		path /youWant
 		header Connection *Upgrade*
 		header Upgrade websocket
 	}
-	reverse_proxy @v2ray_websocket 127.0.0.1:10000
-	
+    
+    reverse_proxy @v2ray_websocket 127.0.0.1:10000
 }
 
 ```
@@ -74,19 +74,16 @@ your.domain {
 
 ```bash
 #!/bin/bash
-docker stop caddy && docker rm caddy;
+# docker stop caddy && docker rm caddy; # 注意, 这一步如果你有名为caddy的docker应用, 绝对不可以做
+
 docker run -d \
     --network=host \
     --name=caddy \
     -v $(yourSitePath):/usr/share/caddy \
     -v $(CaddyfilePath):/etc/caddy/Caddyfile \
     caddy
+    # $(yourSitePath) 和 $(CaddyfilePath) 是本地设备存放网站文件和Caddyfile文件的路径, 比如说: 你本地网站文件的存放路径是: ~/localSite, 你的Caddyfile文件的存放路径是: ~/localSite/config/Caddyfile, 那么$yourSitePath=~/localSite, $CaddyfilePath=~/localSite/config/Caddyfile
 
 ```
 
-
-
 v2ray App的配置放在docker中
-
-
-
