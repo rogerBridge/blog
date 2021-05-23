@@ -1,0 +1,1 @@
+# A hugo static site page repo :)
