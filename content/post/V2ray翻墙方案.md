@@ -112,7 +112,7 @@ v2ray App 的配置放在 docker 中, 配置文件如下:
             "clients": [
               {
                 "id": "", # 可以用 `uuidgen -r`随机生成一个, for example: 40986f00-deeb-4bdf-86e9-c4fcceb70b03
-                "alterId": 64
+                "alterId": 0 # 这里建议更改为0, 启用VmessAEAD, [官方链接](https://twitter.com/realv2fly/status/1304435186583527429)
               }
             ]
           },

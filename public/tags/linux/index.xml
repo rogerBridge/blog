@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on 游戏人生</title>
+    <link>https://log.fenr.men/tags/linux/</link>
+    <description>Recent content in Linux on 游戏人生</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 18 May 2021 23:11:01 +0800</lastBuildDate><atom:link href="https://log.fenr.men/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>V2ray科学上网方案(v2ray&#43;tls&#43;webServer&#43;docker&#43;中转)</title>
+      <link>https://log.fenr.men/post/v2ray%E7%BF%BB%E5%A2%99%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Tue, 18 May 2021 23:11:01 +0800</pubDate>
+      
+      <guid>https://log.fenr.men/post/v2ray%E7%BF%BB%E5%A2%99%E6%96%B9%E6%A1%88/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SSH登录Ubuntu Server的设置方式</title>
+      <link>https://log.fenr.men/post/ssh%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%BA%E5%99%A8%E4%B8%94%E4%B8%8D%E7%94%A8%E5%AF%86%E7%A0%81/</link>
+      <pubDate>Mon, 30 Mar 2020 21:16:44 +0800</pubDate>
+      
+      <guid>https://log.fenr.men/post/ssh%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%BA%E5%99%A8%E4%B8%94%E4%B8%8D%E7%94%A8%E5%AF%86%E7%A0%81/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

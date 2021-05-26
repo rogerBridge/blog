@@ -77,7 +77,7 @@ Go语言的特点就是: ==简单明了==
 
 ## 流程图
 
-- Flowchartf
+- Flowchart
 
 - 学习站点: [mermaid](https://mermaid-js.github.io/mermaid/#/flowchart)
 
