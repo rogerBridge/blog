@@ -265,12 +265,12 @@ docker run -d \
       "settings": {
         "vnext": [
           {
-            "address": "blog.fenr.men",
+            "address": "your-domain",
             "port": 443,
             "users": [
               {
                 "alterId": 0,
-                "id": "3d6d76fe-7607-4ca7-ac56-0480f83382a2",
+                "id": "", // your uuid
                 "level": 0,
                 "security": "auto"
               }
@@ -323,6 +323,7 @@ docker run -d --name v2ray \
   -p 127.0.0.1:10000:10000 \
   -p 127.0.0.1:10010:10010 \
   -v $(configV2rayClientDir):/etc/v2ray \
+  -v $(configV2rayGeoDataDir):/usr/local/share/v2ray \
   -w /etc/v2ray \
   --restart=always \
   v2fly/v2fly-core:latest  v2ray -config=configV2rayClient.json
