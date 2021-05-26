@@ -176,7 +176,7 @@ docker run -d \
     "servers": [
       {
         "address": "https://1.1.1.1/dns-query",
-        "domains": ["geosite:geolocation-!cn"], //参考: v2fly预订义域名列表
+        "domains": ["geosite:geolocation-!cn"], //参考: v2fly预定义域名列表
         "expectIPs": ["geoip:!cn"]
       },
       "8.8.8.8",
@@ -225,7 +225,7 @@ docker run -d \
         "downlinkOnly": 1,
         "handshake": 4,
         "uplinkOnly": 1,
-        "bufferSize": 1024, // 每个连接的缓存, 默认为0
+        "bufferSize": 0, // 每个连接的缓存, 默认为0
         "statsUserUplink": false,
         "statsUserDownlink": false
       }
