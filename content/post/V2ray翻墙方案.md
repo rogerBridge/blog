@@ -96,9 +96,7 @@ docker run -d \
 
 ### Server Side
 
-v2ray App 的配置放在 docker 中, 配置文件如下:
-
-
+v2ray App 的配置放在 docker 中, 配置文件如下(做了一些修改, 读者可自取合适的部分):
 
 **config.json**
 
@@ -157,62 +155,123 @@ docker run -d \
 
 客户端的配置, 这里重点讲一下linux系统的配置, Win和安卓直接粘贴配置文件导入即可, 这里就不赘述了
 
+下面为自己长时间的总结, 读者可根据自己的需要做一些修改
+
 **configV2rayClient.json**
 
 ```bash
 {
+  "log": {
+    "loglevel": "warning"
+  },
+  "v2ray.location.config": "/usr/local/share/v2ray/", // 存放geodata的文件夹, 参考: https://github.com/Loyalsoldier/v2ray-rules-dat, 因为我用的的docker, 而官方镜像将geodata放在/usr/local/share/v2ray/下面, 所以在运行docker容器的时候, 需要做路径映射, 具体脚本在下面 :)
+  "v2ray.conf.geoloader": "standard", // geodata loader
   "dns": {
     "hosts": {
-      "domain:googleapis.cn": "googleapis.com"
+      "dns.google": "8.8.8.8",
+      "dns.pub": "119.29.29.29",
+      "dns.alidns.com": "223.5.5.5",
+      "geosite:category-ads-all": "127.0.0.1" // 这里的127.0.0.1 指的是使用设备本地dns解析
     },
-    "servers": ["1.1.1.1"]
+    "servers": [
+      {
+        "address": "https://1.1.1.1/dns-query",
+        "domains": ["geosite:geolocation-!cn"], //参考: v2fly预订义域名列表
+        "expectIPs": ["geoip:!cn"]
+      },
+      "8.8.8.8",
+      {
+        "address": "114.114.114.114",
+        "port": 53,
+        "domains": ["geosite:cn", "geosite:category-games@cn"],
+        "expectIPs": ["geoip:cn"],
+        "skipFallback": true
+      },
+      {
+        "address": "localhost",
+        "skipFallback": true
+      }
+    ]
+  },
+  // 黑名单模式, 从上到下, 优先级依次降低
+  "routing": {
+    "rules": [
+      {
+        "type": "field",
+        "outboundTag": "block", // 这里的outboundTag对应Outbound(出口), 一个v2ray可以有多个inbound和outbound
+        "domain": ["geosite:category-ads-all"]
+      },
+      {
+        "type": "field",
+        "outboundTag": "proxy",
+        "domain": ["geosite:tld-!cn", "geosite:gfw", "geosite:greatfire"] // tld-!cn 非中国大地使用的域名
+      },
+      {
+        "type": "field",
+        "outboundTag": "proxy",
+        "ip": ["geoip:telegram"]
+      },
+      {
+        "type": "field",
+        "outboundTag": "direct",
+        "network": "tcp,udp"
+      }
+    ]
+  },  
+  "policy": {
+    "levels": {
+      "0": {
+        "connIdle": 300,
+        "downlinkOnly": 1,
+        "handshake": 4,
+        "uplinkOnly": 1,
+        "bufferSize": 1024, // 每个连接的缓存, 默认为0
+        "statsUserUplink": false,
+        "statsUserDownlink": false
+      }
+    },
+    "system": {
+      "statsOutboundUplink": false,
+      "statsOutboundDownlink": false
+    }
   },
   "inbounds": [
     {
-      "listen": "0.0.0.0", // 这里必须写0.0.0.0, 原因是: 如果写127.0.0.1的话, docker无法和我们本机沟通
-      "port": 10000, // This is local V2ray port, socks5
+      "listen": "0.0.0.0", // If you want connect only from localhost, set localhost or 127.0.0.1, If U connect to docker, must set 0.0.0.0
+      "port": 10000,
       "protocol": "socks",
       "settings": {
-        "auth": "noauth",
-        "udp": true,
-        "userLevel": 8
+        "userLevel": 0
       },
       "sniffing": {
         "destOverride": ["http", "tls"],
         "enabled": true
       },
-      "tag": "socks"
+      "tag": "socks000"
     },
     {
       "listen": "0.0.0.0",
-      "port": 10010, // This is local V2ray port, http
+      "port": 10010,
       "protocol": "http",
       "settings": {
-        "userLevel": 8
+        "userLevel": 0
       },
-      "tag": "http"
+      "tag": "http000"
     }
   ],
-  "log": {
-    "loglevel": "info"
-  },
   "outbounds": [
     {
-      "mux": {
-        "concurrency": -1,
-        "enabled": false
-      },
       "protocol": "vmess",
       "settings": {
         "vnext": [
           {
-            "address": "your.domain", # 这里填写你的站点, 不用加协议信息, 直接填写域名就好
+            "address": "blog.fenr.men",
             "port": 443,
             "users": [
               {
-                "alterId": 64,
-                "id": "", # 这里填写你的服务端uuid
-                "level": 8,
+                "alterId": 0,
+                "id": "3d6d76fe-7607-4ca7-ac56-0480f83382a2",
+                "level": 0,
                 "security": "auto"
               }
             ]
@@ -230,10 +289,10 @@ docker run -d \
           "headers": {
             "Host": ""
           },
-          "path": "/youWant" # 这里填写你的path
-         }
+          "path": "/free"
+        }
       },
-      "tag": "proxy"
+      "tag": "proxy" // 每一个outbound都应该有一个tag, routing可以根据tag决定流量从哪个outbound出去
     },
     {
       "protocol": "freedom",
@@ -242,55 +301,10 @@ docker run -d \
     },
     {
       "protocol": "blackhole",
-      "settings": {
-        "response": {
-          "type": "http"
-        }
-      },
+      "settings": {},
       "tag": "block"
     }
-  ],
-  "policy": {
-    "levels": {
-      "8": {
-        "connIdle": 300,
-        "downlinkOnly": 1,
-        "handshake": 4,
-        "uplinkOnly": 1
-      }
-    },
-    "system": {
-      "statsOutboundUplink": true,
-      "statsOutboundDownlink": true
-    }
-  },
-  "routing": {
-    "domainStrategy": "IPIfNonMatch",
-    # 路由这块可以自己定义, 这里我将域名 googleapis.cn添加进了proxy规则
-    "rules": [
-      {
-        "domain": ["domain:googleapis.cn"],
-        "outboundTag": "proxy",
-        "type": "field"
-      },
-      {
-        "ip": ["geoip:private"],
-        "outboundTag": "direct",
-        "type": "field"
-      },
-      {
-        "ip": ["geoip:cn"],
-        "outboundTag": "direct",
-        "type": "field"
-      },
-      {
-        "domain": ["geosite:cn"],
-        "outboundTag": "direct",
-        "type": "field"
-      }
-    ]
-  },
-  "stats": {}
+  ]
 }
 
 ```
