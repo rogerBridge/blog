@@ -3,15 +3,15 @@ title: "Markdown-Typora学习"
 date: 2020-12-14T20:21:42+08:00
 lastmod: 2020-12-14T20:21:42+08:00
 draft: false
-keywords: []
-description: ""
-tags: []
-categories: []
-author: ""
+keywords: ["Markdown", "Typora"]
+description: "记录Typora-Markdown学习历程"
+tags: ["Markdown", "Typora"]
+categories: ["Markdown", "Typora"]
+author: "leo"
 
 # You can also close(false) or open(true) something for this content.
 # P.S. comment can only be closed
-comment: false
+comment: true
 toc: false
 autoCollapseToc: false
 postMetaInFooter: false

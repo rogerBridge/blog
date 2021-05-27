@@ -2,7 +2,7 @@
 title: "Redis基础知识"
 date: 2021-01-01T10:14:57+08:00
 lastmod: 2021-01-01T10:14:57+08:00
-draft: false
+draft: true
 keywords: []
 description: ""
 tags: []

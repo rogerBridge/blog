@@ -2,7 +2,7 @@
 title: "持久化Linux最大文件打开数"
 date: 2020-07-27T21:41:50+08:00
 lastmod: 2020-07-27T21:41:50+08:00
-draft: false
+draft: true
 keywords: []
 description: ""
 tags: []

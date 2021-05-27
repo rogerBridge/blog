@@ -2,7 +2,7 @@
 title: "启动时以root身份运行脚本"
 date: 2020-03-30T14:16:32+08:00
 lastmod: 2020-03-30T14:16:32+08:00
-draft: false
+draft: true
 keywords: ["Linux"]
 description: ""
 tags: []
@@ -46,3 +46,16 @@ echo "A ha~"
 
 然后激活你的服务
 `systemctl enable {serverName}.service`
+
+
+
+如果需要以当前用户身份运行程序, 请出我们的crontab
+
+作为一款定时任务执行工具, 重启时的脚本运行, 是他功能中的一个(定时任务执行)
+
+```bash
+crontab -e # 不要加sudo, 是当前用户的身份
+# 进入编辑器模式后
+@reboot {exec directory}
+```
+

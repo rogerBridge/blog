@@ -2,7 +2,7 @@
 sudo dpkg-reconfigure ca-certificatestitle: "管理ubuntu自带的根证书"
 date: 2020-05-26T12:17:53+08:00
 lastmod: 2020-05-26T12:17:53+08:00
-draft: false
+draft: true
 keywords: []
 description: ""
 tags: ["Ubuntu"]
