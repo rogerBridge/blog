@@ -1,13 +1,13 @@
 ---
-title: "V2ray科学上网方案(v2ray+tls+webServer+docker+中转)"
-date: 2021-05-18T23:11:01+08:00
-lastmod: 2021-05-18T23:11:01+08:00
-draft: false
-keywords: ["VPS"]
+title: "V2rayDraft"
+date: 2021-05-28T01:20:00+08:00
+lastmod: 2021-05-28T01:20:00+08:00
+draft: true
+keywords: []
 description: ""
-tags: ["v2ray", "Linux"]
-categories: ["GFW"]
-author: "leo2n"
+tags: []
+categories: []
+author: ""
 
 # You can also close(false) or open(true) something for this content.
 # P.S. comment can only be closed
@@ -17,28 +17,31 @@ autoCollapseToc: false
 postMetaInFooter: false
 hiddenFromHomePage: false
 # You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
-contentCopyright: true
+contentCopyright: false
+reward: false
+mathjax: false
+mathjaxEnableSingleDollar: false
+mathjaxEnableAutoNumber: false
+
+# You unlisted posts you might want not want the header or footer to show
+hideHeaderAndFooter: false
+
+# You can enable or disable out-of-date content warning for individual post.
+# Comment this out to use the global config.
+#enableOutdatedInfoWarning: false
+
+flowchartDiagrams:
+  enable: false
+  options: ""
+
+sequenceDiagrams: 
+  enable: false
+  options: ""
+
 ---
 
 <!--more-->
-
-目前, 主流的科学上网方式有两种, 一种是加密, 一种是伪装
-
-加密的方式, 稍微接触过一点科学上网的人, 应该都非常熟悉, 例如: vmess on v2ray 就是一种加密方式, 但是缺点是流量没有特征, 容易被 GFW 封禁. 为什么呢? 因为没有特征其实就是最大的特征, 什么人会用完全没有特征的流量呢? 嘿嘿~
-
-这份科学上网方案是我在漫长的使用过程中总结出来的, 具有的特点:
-
-1. 外表是互联网上非常常见的协议, https+websocket
-2. 使用docker部署, 未来将改为docker compose, 更加便捷
-3. (可选) 如果你不信任自己的VPS提供商, 担心会被记录访问站点, 可以用第一层VPS做跳板, 跳转到第二层VPS
-
-最好的方式其实是将自己藏匿于人群中, 你可以使用明面上的 https 流量, 域名指向你的网站, 但是, 接收到你的请求的 web 服务器会从你的请求 URI 中判断(URI 是不会被 GFW 查看到的, 例如: 你的网站是: mydomain.com, 请求 URI 是: /say, 那么这个/say 是不会被 GFW 查看到的, 可以知晓的仅仅是: mydomain.com, 为什么呢? 因为 client 在建立 TLS 连接的时候, 仅仅暴露了目标域名, 如果连目标域名都不想暴露的话, 就得使用 ESNI, 可惜, 国内目前不支持ESNI), 你到底是想要查看自己的网站, 还是想访问特定的 web app, Web Server 会根据你的 URI 来判断, 流程图如下:
-
-![](/img/V2ray科学上网方案/proxy.png)
-
-过程如下:
-
-本地设备与 Web 服务器建立 TLS 连接, Web 服务器通过查看设备的 URI, 将请求转发至不同的 App, 下面是服务器的配置(为了简单, 这里我们使用[Caddy](https://github.com/caddyserver/caddy) 服务器, 并且假设我们将 v2ray App 配置在 localhost:10000)
+下面是服务器的配置(为了简单, 这里我们使用[Caddy](https://github.com/caddyserver/caddy) 服务器, 并且假设我们将 v2ray App 配置在 localhost:10000)
 
 ## Caddy 的配置过程
 
