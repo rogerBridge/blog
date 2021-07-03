@@ -7,7 +7,7 @@ keywords: ["v2ray"]
 description: ""
 tags: ["科学上网"]
 categories: ["科学上网"]
-author: "leo2n"
+author: "gina"
 
 # You can also close(false) or open(true) something for this content.
 # P.S. comment can only be closed

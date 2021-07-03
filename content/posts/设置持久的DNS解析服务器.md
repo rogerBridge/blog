@@ -7,7 +7,7 @@ keywords: ["DNS解析"]
 description: ""
 tags: []
 categories: ["Linux"]
-author: "leo"
+author: "gina"
 
 # You can also close(false) or open(true) something for this content.
 # P.S. comment can only be closed

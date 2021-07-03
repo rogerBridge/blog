@@ -7,7 +7,7 @@ keywords: ["SSH"]
 description: "登录远程服务器的方式之一"
 tags: ["SSH", "Linux"]
 categories: ["Linux"]
-author: "leo"
+author: "gina"
 
 # You can also close(false) or open(true) something for this content.
 # P.S. comment can only be closed

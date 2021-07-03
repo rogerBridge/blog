@@ -7,7 +7,7 @@ keywords: ["Markdown", "Typora"]
 description: "记录Typora-Markdown学习历程"
 tags: ["Markdown", "Typora"]
 categories: ["Markdown", "Typora"]
-author: "leo"
+author: "gina"
 
 # You can also close(false) or open(true) something for this content.
 # P.S. comment can only be closed
