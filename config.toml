@@ -1,9 +1,8 @@
 baseURL = "https://blog.fenr.men"
 # # [en, zh-cn, fr, ...] determines default content language
-# defaultContentLanguage = "zh-cn"
+defaultContentLanguage = "zh-cn"
 # # language code
-# languageCode = "zh-cn"
-# title = "Game Life"
+languageCode = "zh-cn"
 
 # Change the default theme to be use when building the site with Hugo
 theme = "LoveIt"
