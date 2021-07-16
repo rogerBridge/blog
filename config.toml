@@ -398,7 +398,7 @@ theme = "LoveIt"
         enable = false
       #  Utterances comment config
       [params.page.comment.utterances]
-        enable = true
+        enable = false
         # owner/repo
         repo = "rogerBridge/blog"
         issueTerm = "pathname"
