@@ -173,10 +173,10 @@ theme = "LoveIt"
     [params.home.posts]
       enable = true
       # special amount of posts in each home posts page
-      paginate = 8
+      paginate = 20
       #  replaced with hiddenFromHomePage in params.page
       # default behavior when you don't set "hiddenFromHomePage" in front matter
-      defaultHiddenFromHomePage = false
+      defaultHiddenFromHomePage = true
 
   # Social config about the author
   [params.social]
@@ -256,9 +256,9 @@ theme = "LoveIt"
     # whether to enable lightgallery
     lightgallery = false
     #  whether to enable the ruby extended syntax
-    ruby = true
+    ruby = false
     #  whether to enable the fraction extended syntax
-    fraction = true
+    fraction = false
     #  whether to enable the fontawesome extended syntax
     fontawesome = true
     # whether to show link to Raw Markdown content of the content
@@ -270,12 +270,12 @@ theme = "LoveIt"
       # whether to enable the table of the contents
       enable = true
       #  whether to keep the static table of the contents in front of the post
-      keepStatic = true
+      keepStatic = false
       # whether to make the table of the contents in the sidebar automatically collapsed
-      auto = true
+      auto = false
     #  KaTeX mathematical formulas
     [params.page.math]
-      enable = true
+      enable = false
       # default block delimiter is $$ ... $$ and \\[ ... \\]
       blockLeftDelimiter = ""
       blockRightDelimiter = ""
@@ -283,9 +283,9 @@ theme = "LoveIt"
       inlineLeftDelimiter = ""
       inlineRightDelimiter = ""
       # KaTeX extension copy_tex
-      copyTex = true
+      copyTex = false
       # KaTeX extension mhchem
-      mhchem = true
+      mhchem = false
     #  Code config
     [params.page.code]
       # whether to show the copy button of the code block
@@ -340,7 +340,7 @@ theme = "LoveIt"
       Mix = false
     #  Comment config
     [params.page.comment]
-      enable = false
+      enable = true
       # Disqus comment config
       [params.page.comment.disqus]
         # 
@@ -398,11 +398,11 @@ theme = "LoveIt"
         enable = false
       #  Utterances comment config
       [params.page.comment.utterances]
-        enable = false
+        enable = true
         # owner/repo
-        repo = ""
+        repo = "rogerBridge/blog"
         issueTerm = "pathname"
-        label = ""
+        label = "comment"
         lightTheme = "github-light"
         darkTheme = "github-dark"
     #  Third-party library config
@@ -417,25 +417,25 @@ theme = "LoveIt"
         # located in "assets/"
         # Or
         # someJavascript = "https://cdn.example.com/some.js"
-    #  Page SEO config
-    [params.page.seo]
-      # image URL
-      images = []
-      # Publisher info
-      [params.page.seo.publisher]
-        name = ""
-        logoUrl = ""
+    # #  Page SEO config
+    # [params.page.seo]
+    #   # image URL
+    #   images = []
+    #   # Publisher info
+    #   [params.page.seo.publisher]
+    #     name = ""
+    #     logoUrl = ""
 
-  #  TypeIt config
-  [params.typeit]
-    # typing speed between each step (measured in milliseconds)
-    speed = 100
-    # blinking speed of the cursor (measured in milliseconds)
-    cursorSpeed = 1000
-    # character used for the cursor (HTML format is supported)
-    cursorChar = "|"
-    # cursor duration after typing finishing (measured in milliseconds, "-1" means unlimited)
-    duration = -1
+  # #  TypeIt config
+  # [params.typeit]
+  #   # typing speed between each step (measured in milliseconds)
+  #   speed = 100
+  #   # blinking speed of the cursor (measured in milliseconds)
+  #   cursorSpeed = 1000
+  #   # character used for the cursor (HTML format is supported)
+  #   cursorChar = "|"
+  #   # cursor duration after typing finishing (measured in milliseconds, "-1" means unlimited)
+  #   duration = -1
 
   # Site verification code config for Google/Bing/Yandex/Pinterest/Baidu
   # [params.verification]
