@@ -164,7 +164,7 @@ theme = "LoveIt"
       # subtitle shown in home page
       subtitle = ""
       # whether to use typeit animation for subtitle
-      typeit = true
+      typeit = false
       # whether to show social links
       social = true
       #  disclaimer (HTML format is supported)
