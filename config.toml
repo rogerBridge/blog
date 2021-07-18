@@ -75,7 +75,7 @@ theme = "LoveIt"
   [params.search]
     enable = true
     # type of search engine ("lunr", "algolia")
-    type = "algolia"
+    type = "lunr"
     # max index length of the chunked content
     contentLength = 4096
     # placeholder of the search bar
