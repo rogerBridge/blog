@@ -32,7 +32,7 @@ _注意: v2ray并不区分客户端和服务端, 你可以把它们通通想象�
 
 下面: 让我们来deploy一个现在比较基础的翻墙网络, 基本的流程图如下:
 
-![](/img/V2ray科学上网方案/v2ray.drawio.png)
+![](/img/V2ray/v2ray.drawio.png)
 
 解释上图: 
 

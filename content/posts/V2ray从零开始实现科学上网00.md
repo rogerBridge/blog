@@ -36,7 +36,7 @@ contentCopyright: true
 
 流程图如下:
 
-![](/img/V2ray科学上网方案/proxy.png)
+![](/img/V2ray/proxy.png)
 
 过程如下:
 
