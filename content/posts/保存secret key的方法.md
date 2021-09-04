@@ -3,7 +3,7 @@ title: "保存密钥的想法(Alpha)"
 date: 2021-05-28T20:22:37+08:00
 lastmod: 2021-05-28T20:22:37+08:00
 draft: false
-keywords: ["保存", "存储"]
+keywords: ["store"]
 description: ""
 tags: ["daydream"]
 categories: ["flash idea"]
