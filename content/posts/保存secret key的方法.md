@@ -1,5 +1,5 @@
 ---
-title: "保存密钥的想法(Alpha)"
+title: "保存secret key的想法"
 date: 2021-05-28T20:22:37+08:00
 lastmod: 2021-05-28T20:22:37+08:00
 draft: false
