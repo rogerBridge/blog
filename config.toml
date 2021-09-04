@@ -344,7 +344,7 @@ theme = "LoveIt"
       # Disqus comment config
       [params.page.comment.disqus]
         # 
-        enable = true
+        enable = false
         # Disqus shortname to use Disqus in posts
         shortname = "anonymous"
       # Gitalk comment config
@@ -398,10 +398,10 @@ theme = "LoveIt"
         enable = false
       #  Utterances comment config
       [params.page.comment.utterances]
-        enable = false
+        enable = true
         # owner/repo
         repo = "rogerBridge/blog"
-        issueTerm = "pathname"
+        issueTerm = "blog-comments"
         label = ""
         lightTheme = "github-light"
         darkTheme = "github-dark"
