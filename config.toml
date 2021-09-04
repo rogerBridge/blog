@@ -350,11 +350,11 @@ theme = "LoveIt"
       # Gitalk comment config
       [params.page.comment.gitalk]
         # 
-        enable = false
-        owner = ""
-        repo = ""
-        clientId = ""
-        clientSecret = ""
+        enable = true
+        owner = "rogerBridge"
+        repo = "https://github.com/rogerBridge/blog"
+        clientId = "6a5132fa25e4b9546196"
+        clientSecret = "ae70fe10577b88813210823dc09c16bba9fecf48"
       # Valine comment config
       [params.page.comment.valine]
         enable = false
