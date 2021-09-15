@@ -3,7 +3,7 @@ baseURL = "https://blog.fenr.men"
 defaultContentLanguage = "zh-cn"
 # # language code
 languageCode = "zh-cn"
-title = "Not Bad"
+title = "Not Bad, roger's public page"
 
 # Change the default theme to be use when building the site with Hugo
 theme = "LoveIt"
