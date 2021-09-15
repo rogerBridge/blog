@@ -3,7 +3,7 @@ baseURL = "https://blog.fenr.men"
 defaultContentLanguage = "zh-cn"
 # # language code
 languageCode = "zh-cn"
-title = "Not Bad, roger's public page"
+title = "Not Bad ~~"
 
 # Change the default theme to be use when building the site with Hugo
 theme = "LoveIt"
@@ -104,7 +104,7 @@ theme = "LoveIt"
       # URL of the LOGO
       logo = ""
       # title name
-      name = "Game Life"
+      name = "Not Bad"
       # you can add extra information before the name (HTML format is supported), such as icons
       pre = ""
       # you can add extra information after the name (HTML format is supported), such as icons
