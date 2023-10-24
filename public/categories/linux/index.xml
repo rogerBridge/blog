@@ -1,0 +1,126 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Linux - 分类 - Not Bad ~~</title>
+        <link>https://pub.fenr.men/categories/linux/</link>
+        <description>Linux - 分类 - Not Bad ~~</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 16 Jun 2020 03:06:29 &#43;0800</lastBuildDate><atom:link href="https://pub.fenr.men/categories/linux/" rel="self" type="application/rss+xml" /><item>
+    <title>Linux下设置持久的DNS解析服务器</title>
+    <link>https://pub.fenr.men/%E8%AE%BE%E7%BD%AE%E6%8C%81%E4%B9%85%E7%9A%84dns%E8%A7%A3%E6%9E%90%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+    <pubDate>Tue, 16 Jun 2020 03:06:29 &#43;0800</pubDate>
+    <author>gina</author>
+    <guid>https://pub.fenr.men/%E8%AE%BE%E7%BD%AE%E6%8C%81%E4%B9%85%E7%9A%84dns%E8%A7%A3%E6%9E%90%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+    <description><![CDATA[<ul>
+<li>
+<p>系统: Ubuntu 20.04 LTS</p>
+<p>方法一: resolvconf, 这个包可以在每次启动的时候, 修改/etc/resolv.conf文件, 持久化用户的nameserver设置</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt update
+</span></span><span class="line"><span class="cl">sudo apt install resolvconf
+</span></span><span class="line"><span class="cl">sudo nano /etc/resolvconf/resolv.conf.d/head <span class="c1"># add nameserver 119.29.29.29</span>
+</span></span><span class="line"><span class="cl">sudo systemctl restart resolvconf.service <span class="c1"># Then logout and login</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description>
+</item>
+<item>
+    <title>SSH登录Ubuntu Server的设置方式</title>
+    <link>https://pub.fenr.men/ssh%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%BA%E5%99%A8%E4%B8%94%E4%B8%8D%E7%94%A8%E5%AF%86%E7%A0%81/</link>
+    <pubDate>Mon, 30 Mar 2020 21:16:44 &#43;0800</pubDate>
+    <author>gina</author>
+    <guid>https://pub.fenr.men/ssh%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%BA%E5%99%A8%E4%B8%94%E4%B8%8D%E7%94%A8%E5%AF%86%E7%A0%81/</guid>
+    <description><![CDATA[<p>首先, 创建一个公钥秘钥对</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># type ecdsa -b(bit length) 521 bit</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ECDSA 是一个较短bit产生高强度的公钥-私钥对的方式</span>
+</span></span><span class="line"><span class="cl">ssh-keygen -t ecdsa -b <span class="m">521</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后, 将生成的文件添加到远程机器的authorized_keys文件下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cat ~/.ssh/{{ name you generated }}.pub | ssh a@A &#39;cat &gt;&gt; .ssh/authorized_keys&#39;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>或者</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh-copy-id -i <span class="o">[</span>public key file path<span class="o">]</span> <span class="o">[</span>userName<span class="o">]</span>@<span class="o">[</span>hostAddress<span class="o">]</span>:~/.ssh/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>配置完成后, SSH登录远程机器就不用输入密码啦, 直接可以使用SSH方式连接</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh <span class="o">{{</span>username<span class="o">}}</span>@<span class="o">{{</span>host<span class="o">}}</span> -i <span class="o">{{</span>privKey<span class="o">}}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description>
+</item>
+<item>
+    <title>系统从休眠状态中恢复时启动脚本</title>
+    <link>https://pub.fenr.men/%E7%B3%BB%E7%BB%9F%E4%BB%8E%E4%B8%8D%E5%90%8C%E7%8A%B6%E6%80%81%E4%B8%AD%E6%81%A2%E5%A4%8D%E6%97%B6%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC/</link>
+    <pubDate>Mon, 30 Mar 2020 18:24:46 &#43;0800</pubDate>
+    <author>gina</author>
+    <guid>https://pub.fenr.men/%E7%B3%BB%E7%BB%9F%E4%BB%8E%E4%B8%8D%E5%90%8C%E7%8A%B6%E6%80%81%E4%B8%AD%E6%81%A2%E5%A4%8D%E6%97%B6%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC/</guid>
+    <description><![CDATA[<p>遇到一个问题, 系统从hibernate状态中恢复后, systemd中的一个自定义服务, 不运行了, 解决办法是: 加入新的Target</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[Unit]
+</span></span><span class="line"><span class="cl">Description=Run my scripts
+</span></span><span class="line"><span class="cl"># After=suspend.target # 在suspend之后执行
+</span></span><span class="line"><span class="cl">After=hibernate.target
+</span></span><span class="line"><span class="cl"># After=hybrid-sleep.target
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[Service]
+</span></span><span class="line"><span class="cl">ExecStart=/some/path/run/yourScript
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[Install]
+</span></span><span class="line"><span class="cl">WantedBy=default.target # 启动时引导至unit
+</span></span><span class="line"><span class="cl"># WantedBy=suspend.target # suspend时引导至unit
+</span></span><span class="line"><span class="cl">WantedBy=hibernate.target
+</span></span><span class="line"><span class="cl"># WantedBy=hybrid-sleep.target
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description>
+</item>
+</channel>
+</rss>

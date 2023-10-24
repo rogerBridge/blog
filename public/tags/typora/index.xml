@@ -1,0 +1,95 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Typora - 标签 - Not Bad ~~</title>
+        <link>https://pub.fenr.men/tags/typora/</link>
+        <description>Typora - 标签 - Not Bad ~~</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 14 Dec 2020 20:21:42 &#43;0800</lastBuildDate><atom:link href="https://pub.fenr.men/tags/typora/" rel="self" type="application/rss+xml" /><item>
+    <title>Markdown-Typora学习</title>
+    <link>https://pub.fenr.men/markdown-typora%E5%AD%A6%E4%B9%A0/</link>
+    <pubDate>Mon, 14 Dec 2020 20:21:42 &#43;0800</pubDate>
+    <author>gina</author>
+    <guid>https://pub.fenr.men/markdown-typora%E5%AD%A6%E4%B9%A0/</guid>
+    <description><![CDATA[<h2 id="typora-常用快捷键">Typora 常用快捷键</h2>
+<p><code>Ctrl1</code> 到 <code>Ctrl4</code>   文章标题大小</p>
+<p><code>Ctrl  B</code> <strong>文本加粗</strong></p>
+<p><code>Ctrl  I</code> <em>文本斜体</em></p>
+<p><code>Ctrl  U</code> <u>下划线</u></p>
+<p><code>Shift Alt 5</code> <del>删除线</del></p>
+<p><code>Shift Ctrl ~</code> 行内代码块</p>
+<p><code>Ctrl K </code> 超链接, 比如<a href="https://blog.fenr.men" target="_blank" rel="noopener noreffer ">我的博客</a></p>
+<p><code>Ctrl T</code> 生成表格, 支持拖拽移动, 网页端表格复制</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Age</th>
+<th>Height</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Leborn James</td>
+<td>36</td>
+<td>203</td>
+</tr>
+<tr>
+<td>Kawhi Leonard</td>
+<td>29</td>
+<td>203</td>
+</tr>
+<tr>
+<td>Chris Paul</td>
+<td>38</td>
+<td>185</td>
+</tr>
+</tbody>
+</table>
+<p><code>Ctrl Shift Q</code> 插入引用</p>
+<blockquote>
+<p>这里是插入的内容, 嘤嘤嘤</p>
+</blockquote>
+<p><code>Ctrl Shift I</code> 插入图片</p>
+<p></p>
+<h2 id="typora其他">Typora其他</h2>
+<p><strong>引用</strong></p>
+<p>参考链接: Golang<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> 是一个静态编译型语言</p>
+<p><strong>上标下标</strong></p>
+<p>(a+b)*(a-b) = a^2^ + b^2^</p>
+<p>2H~2~ +O~2~ = 2H~2~O</p>
+<p><strong>高亮</strong></p>
+<p>Go语言的特点就是: ==简单明了==</p>
+<h2 id="流程图">流程图</h2>
+<ul>
+<li>
+<p>Flowchart</p>
+</li>
+<li>
+<p>学习站点: <a href="https://mermaid-js.github.io/mermaid/#/flowchart" target="_blank" rel="noopener noreffer ">mermaid</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">graph TB
+</span></span><span class="line"><span class="cl">base(Go) --&gt; a(simple)
+</span></span><span class="line"><span class="cl">base(Go) --&gt; b(static type)
+</span></span><span class="line"><span class="cl">base(Go) --&gt; c(compiled)
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h2 id="参考链接">参考链接</h2>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://en.wikipedia.org/wiki/Go_%28programming_language%29" target="_blank" rel="noopener noreffer ">https://en.wikipedia.org/wiki/Go_(programming_language)</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>]]></description>
+</item>
+</channel>
+</rss>
