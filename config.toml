@@ -1,4 +1,4 @@
-baseURL = "https://pub.fenr.men"
+baseURL = "https://blog.fenr.men"
 # # [en, zh-cn, fr, ...] determines default content language
 defaultContentLanguage = "zh-cn"
 # # language code
