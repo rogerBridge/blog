@@ -1,35 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>daydream - 标签 - Not Bad ~~</title>
-        <link>https://pub.fenr.men/tags/daydream/</link>
-        <description>daydream - 标签 - Not Bad ~~</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 28 May 2021 20:22:37 &#43;0800</lastBuildDate><atom:link href="https://pub.fenr.men/tags/daydream/" rel="self" type="application/rss+xml" /><item>
+        <title>daydream - 标签 - Not Bad</title>
+        <link>https://blog.fenr.men/tags/daydream/</link>
+        <description>daydream - 标签 - Not Bad</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 28 May 2021 20:22:37 &#43;0800</lastBuildDate><atom:link href="https://blog.fenr.men/tags/daydream/" rel="self" type="application/rss+xml" /><item>
     <title>保存secret key的想法</title>
-    <link>https://pub.fenr.men/%E4%BF%9D%E5%AD%98secret-key%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+    <link>https://blog.fenr.men/%E4%BF%9D%E5%AD%98secret-key%E7%9A%84%E6%96%B9%E6%B3%95/</link>
     <pubDate>Fri, 28 May 2021 20:22:37 &#43;0800</pubDate>
     <author>gina</author>
-    <guid>https://pub.fenr.men/%E4%BF%9D%E5%AD%98secret-key%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
-    <description><![CDATA[<p>有个想法, 有没有可能知道一个区块链的公钥地址, 拿到它的私钥呢?</p>
-<p>如果我把私钥加密, 用转账的形式, 给自己转账的时候添加一个备注信息, 备注信息就是加密后的私钥, 使用对称加密方法, 只需要我记的自己的密码就好,</p>
-<p>那完整的流程就是:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">graph LR
-</span></span><span class="line"><span class="cl">   origin -- sha256 --&gt; bytesArray -- AES256GCM+message --&gt; encryptedBytes -- base64 --&gt; storeString
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>步骤如下:</p>
-<ol>
-<li>首先, 设置一个自己的origin, origin就是你的密码;</li>
-<li>然后, 使用SHA256SUM方法, 生成自己密码的摘要, []byte, 32个字节的长度;</li>
-<li>然后, 使用AES256GCM的方法, 输入密码摘要和需要加密的字符串(也就是你的密钥或者助记词), 生成字节流, 为了便于肉眼查看和避免传输过程中包含特殊字符出现意外情况, 使用base64编码;</li>
-</ol>
-<p>具体的执行代码在此: <a href="https://gist.github.com/rogerBridge/4595e52040556ac6ecd000fb18d2db0a" target="_blank" rel="noopener noreffer ">link</a></p>
-<p>其实还可以使用gpg, 一个很好玩的工具, 先挖个坑, 以后填~</p>]]></description>
+    <guid>https://blog.fenr.men/%E4%BF%9D%E5%AD%98secret-key%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+    <description><![CDATA[]]></description>
 </item>
 </channel>
 </rss>

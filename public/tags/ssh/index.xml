@@ -1,55 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>SSH - 标签 - Not Bad ~~</title>
-        <link>https://pub.fenr.men/tags/ssh/</link>
-        <description>SSH - 标签 - Not Bad ~~</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 30 Mar 2020 21:16:44 &#43;0800</lastBuildDate><atom:link href="https://pub.fenr.men/tags/ssh/" rel="self" type="application/rss+xml" /><item>
+        <title>SSH - 标签 - Not Bad</title>
+        <link>https://blog.fenr.men/tags/ssh/</link>
+        <description>SSH - 标签 - Not Bad</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 30 Mar 2020 21:16:44 &#43;0800</lastBuildDate><atom:link href="https://blog.fenr.men/tags/ssh/" rel="self" type="application/rss+xml" /><item>
     <title>SSH登录Ubuntu Server的设置方式</title>
-    <link>https://pub.fenr.men/ssh%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%BA%E5%99%A8%E4%B8%94%E4%B8%8D%E7%94%A8%E5%AF%86%E7%A0%81/</link>
+    <link>https://blog.fenr.men/ssh%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%BA%E5%99%A8%E4%B8%94%E4%B8%8D%E7%94%A8%E5%AF%86%E7%A0%81/</link>
     <pubDate>Mon, 30 Mar 2020 21:16:44 &#43;0800</pubDate>
     <author>gina</author>
-    <guid>https://pub.fenr.men/ssh%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%BA%E5%99%A8%E4%B8%94%E4%B8%8D%E7%94%A8%E5%AF%86%E7%A0%81/</guid>
-    <description><![CDATA[<p>首先, 创建一个公钥秘钥对</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># type ecdsa -b(bit length) 521 bit</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># ECDSA 是一个较短bit产生高强度的公钥-私钥对的方式</span>
-</span></span><span class="line"><span class="cl">ssh-keygen -t ecdsa -b <span class="m">521</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>然后, 将生成的文件添加到远程机器的authorized_keys文件下</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cat ~/.ssh/{{ name you generated }}.pub | ssh a@A &#39;cat &gt;&gt; .ssh/authorized_keys&#39;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>或者</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh-copy-id -i <span class="o">[</span>public key file path<span class="o">]</span> <span class="o">[</span>userName<span class="o">]</span>@<span class="o">[</span>hostAddress<span class="o">]</span>:~/.ssh/
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>配置完成后, SSH登录远程机器就不用输入密码啦, 直接可以使用SSH方式连接</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh <span class="o">{{</span>username<span class="o">}}</span>@<span class="o">{{</span>host<span class="o">}}</span> -i <span class="o">{{</span>privKey<span class="o">}}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div>]]></description>
+    <guid>https://blog.fenr.men/ssh%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%BA%E5%99%A8%E4%B8%94%E4%B8%8D%E7%94%A8%E5%AF%86%E7%A0%81/</guid>
+    <description><![CDATA[登录远程服务器的方式之一]]></description>
 </item>
 </channel>
 </rss>
